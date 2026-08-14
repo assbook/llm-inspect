@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Launch Insight"
+  short_description: "Scan a new LLM across 10 insight dimensions with source links"
+  default_prompt: "Use $llm-launch-insight to assess a newly launched model across ten capability dimensions and gather its web sources."
