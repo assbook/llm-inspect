@@ -21,7 +21,7 @@ Report as model-plus-harness evidence; note contamination and saturation.
 - Chinese: SuperCLUE https://superclue.ai · C-Eval https://cevalbenchmark.com · FlagEval https://flageval.baai.ac.cn
 
 ## 3. Inference & deployment (推理与部署特性)
-Memory footprint, quantization, framework support, TTFT/TPOT, throughput, minimum hardware.
+Memory footprint, quantization, acceleration optimizations, framework support, TTFT/TPOT, throughput, minimum hardware, and local cost assumptions. Check FP8/INT8/INT4 or GPTQ/AWQ, FlashAttention/PagedAttention, fused kernels/CUDA graphs, speculative decoding, continuous batching, prefix/KV-cache reuse, tensor/pipeline parallelism, and CPU/NVMe offload. Report baseline versus optimized settings and any quality regression.
 - vLLM: https://docs.vllm.ai
 - SGLang: https://sglang.ai
 - TensorRT-LLM: https://github.com/NVIDIA/TensorRT-LLM
@@ -30,7 +30,7 @@ Memory footprint, quantization, framework support, TTFT/TPOT, throughput, minimu
 - LMDeploy: https://github.com/InternLM/lmdeploy
 
 ## 4. Cloud availability & cost (云上可得性与成本)
-Which clouds host it, serverless vs dedicated, regions, per-1M-token input/output pricing, batch discount.
+Which clouds host it, serverless vs dedicated, regions, per-1M-token input/output pricing, batch discount, and how the cloud option compares with self-hosting. Keep local hardware, power, utilization, amortization, and operations assumptions separate from token pricing.
 - AWS Bedrock: https://aws.amazon.com/bedrock/
 - Azure AI Foundry: https://azure.microsoft.com/products/ai-foundry
 - Google Vertex AI: https://cloud.google.com/vertex-ai
@@ -79,10 +79,11 @@ Run your own harness on RAG/agent/coding/multilingual chains; record badcases, h
 - Weave (W&B): https://weave-docs.wandb.ai
 
 ## 10. Independent price/performance cross-check (价格-性能-可用性独立交叉验证)
-Cross-check vendor claims against independent measurement.
+Cross-check vendor claims against independent measurement, including local acceleration, throughput, latency, and total cost of ownership under matched hardware, precision, context, and concurrency settings.
 - Artificial Analysis: https://artificialanalysis.ai
 - OpenRouter: https://openrouter.ai
 - Together AI: https://www.together.ai
 - Fireworks: https://fireworks.ai
 - Groq: https://groq.com
 - Replicate: https://replicate.com
+- MLCommons Inference: https://mlcommons.org/benchmarks/inference/
